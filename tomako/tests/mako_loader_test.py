@@ -4,13 +4,13 @@ import unittest
 
 from tornado.escape import to_unicode
 
-from tomako.loader import MakoLoader
+from tomako.loader import MakoTemplateLoader
 
 
-class MakoLoaderTest(unittest.TestCase):
+class MakoTemplateLoaderTest(unittest.TestCase):
     def setUp(self):
         path = os.path.join(os.path.dirname(__file__), "templates")
-        self.loader = MakoLoader(path)
+        self.loader = MakoTemplateLoader(path)
 
     def test_mako_syntax_in_utf8_file(self):
         tmpl = self.loader.load("utf8.html")
