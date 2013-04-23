@@ -13,34 +13,34 @@ Usage
 The recommended approach is to pass ``template_loader`` configuration
 to ``Application`` class.
 
-```
-from tomako import MakoTemplateLoader
+.. code-block:: python
 
-conf = {
-    'template_loader': MakoTemplateLoader('/full/template/path')
-}
-app = Application(urls, **conf)
-```
+    from tomako import MakoTemplateLoader
+
+    conf = {
+        'template_loader': MakoTemplateLoader('/full/template/path')
+    }
+    app = Application(urls, **conf)
 
 If you can't for any reason modify the ``template_loader``
 configuration or you want to use Mako as a template engine only on
 some handlers, you can overwrite ``RequestHandler.create_template_loader``.
 
-```
-from tornado.web import RequestHandler
-from tomako import MakoTemplateLoader
+.. code-block:: python
 
-class MyHandler(RequestHandler):
-    def create_template_loader(self, template_path):
-        return MakoTemplateLoader(template_path)
-```
+    from tornado.web import RequestHandler
+    from tomako import MakoTemplateLoader
+
+    class MyHandler(RequestHandler):
+        def create_template_loader(self, template_path):
+            return MakoTemplateLoader(template_path)
 
 Install
 -------
 
-```
-pip install tomako
-```
+.. code-block:: shell
+
+    pip install tomako
 
 License
 -------
