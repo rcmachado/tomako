@@ -1,9 +1,17 @@
 Tornado + Mako = tomako
 =======================
 
-Tomako is a tiny library designed to provide integration between Mako and Tornado.
+Tomako is a tiny library designed to provide an easy way to use Mako
+as a template engine for Tornado.
+
+Install
+-------
+
+```
+pip install tomako
+```
 
 License
 -------
 
-This work is licensed under MIT (see LICENSE file).
+This work is licensed under MIT license (see LICENSE file).
