@@ -43,6 +43,7 @@ special namespace called ``tomako.template`` in your templates:
 
 .. code-block:: python
 
+    # Your python file
     from tornado.web import UIModule
 
     class MyModule(UIModule):
@@ -52,6 +53,7 @@ special namespace called ``tomako.template`` in your templates:
 
 .. code-block:: html
 
+    <!-- Your template -->
     <%namespace name="tomako" module="tomako.template" />
 
     <%tomako:ui uiclass="your.project.module.MyModule" arg1="value1" arg2="value2" />
