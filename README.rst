@@ -38,7 +38,7 @@ some handlers, you can overwrite ``RequestHandler.create_template_loader``.
 Tornado UIModules
 -----------------
 
-Tomako has basic support for Tornado's UIModules. You must include a
+Tomako has basic support for Tornado's UIModules_. You must include a
 special namespace called ``tomako.template`` in your templates:
 
 .. code-block:: python
@@ -74,3 +74,5 @@ License
 -------
 
 This work is licensed under MIT license (see LICENSE file).
+
+.. _UIModules: http://www.tornadoweb.org/en/stable/overview.html#ui-modules
