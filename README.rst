@@ -35,6 +35,27 @@ some handlers, you can overwrite ``RequestHandler.create_template_loader``.
         def create_template_loader(self, template_path):
             return MakoTemplateLoader(template_path)
 
+Tornado UIModules
+-----------------
+
+Tomako has basic support for Tornado's UIModules. You must include a
+special namespace called ``tomako.template`` in your templates:
+
+.. code-block:: python
+
+    from tornado.web import UIModule
+
+    class MyModule(UIModule):
+        def render(self, arg1, arg2):
+            # do something with args here...
+            return 'some string'
+
+.. code-block:: html
+
+    <%namespace name="tomako" module="tomako.template" />
+
+    <%tomako:ui uiclass="your.project.module.MyModule" arg1="value1" arg2="value2" />
+
 Install
 -------
 
@@ -45,7 +66,7 @@ Install
 To-Do
 -----
 
- * Implement a standard way to use UIModules
+ * Improve support on UIModules
 
 License
 -------
