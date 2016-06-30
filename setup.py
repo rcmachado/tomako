@@ -8,7 +8,7 @@ README_FILE = os.path.join(os.path.dirname(__file__), 'README.rst')
 
 setup(
     name='tomako',
-    version='0.1.0',
+    version='0.1.0post1',
     description='Tomako is the easiest way to use Mako as a template engine '
                 'for Tornado',
     long_description=open(README_FILE).read(),
